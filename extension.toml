@@ -1,0 +1,7 @@
+[extension]
+id = "eslint"
+name = "ESLint"
+version = "0.1.0"
+description = "JavaScript and TypeScript linter and code quality scanner"
+author = "biscuit-extensions"
+icon = "icon.png"
