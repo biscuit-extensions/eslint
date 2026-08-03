@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "eslint"
-version = "0.1.0"
-description = "JavaScript and TypeScript linter and code quality scanner"
-authors = ["biscuit-extensions"]
+version = "0.2.0"
+description = "JavaScript and TypeScript problem scanner, rule linter, and diagnostic annotator"
+authors = ["tomlin7"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

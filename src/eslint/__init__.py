@@ -10,4 +10,6 @@ if typing.TYPE_CHECKING:
 
 def setup(api: ExtensionsAPI) -> None:
     """Entrypoint for Biscuit to load the extension."""
-    api.register("eslint", ESLint(api))
+    ext = ESLint(api)
+    api.register("eslint", ext)
+    ext.install()

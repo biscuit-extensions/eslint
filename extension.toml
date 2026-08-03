@@ -1,7 +1,27 @@
 [extension]
 id = "eslint"
 name = "ESLint"
-version = "0.1.0"
-description = "JavaScript and TypeScript linter and code quality scanner"
-author = "biscuit-extensions"
+version = "0.2.0"
+description = "JavaScript and TypeScript problem scanner, rule linter, and diagnostic annotator"
+author = "tomlin7"
 icon = "icon.png"
+repository = "https://github.com/biscuit-extensions/eslint"
+
+[dependencies]
+python = []
+tools = [
+    "node",
+    "eslint",
+    "npx"
+]
+
+[contributes]
+commands = [
+    { id = "eslint.lint_document", title = "ESLint: Lint Current Document" },
+    { id = "eslint.fix_document", title = "ESLint: Fix All Auto-fixable Problems" },
+    { id = "eslint.clear_diagnostics", title = "ESLint: Clear Diagnostics" }
+]
+settings = [
+    { id = "eslint.enable", type = "boolean", default = true, description = "Enable or disable ESLint linting" },
+    { id = "eslint.autoFixOnSave", type = "boolean", default = false, description = "Automatically apply fixes on document save" }
+]
