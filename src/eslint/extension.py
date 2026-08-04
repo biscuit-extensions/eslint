@@ -312,8 +312,11 @@ class ESLint(Extension):
         except Exception:
             return []
 
-    def apply_fixes(self, code: str, fixes: list[dict[str, Any]]) -> str:
+    def apply_fixes(self, code: str, fixes: list[dict[str, Any]] | None = None) -> str:
         """Apply automatic text fixes to code."""
+        if fixes is None:
+            return self.fix_code(code)
+
         lines = code.splitlines()
 
         # Handle line-based replacements
